@@ -1,0 +1,21 @@
+
+{% block react_head %}
+{% include 'react_scripts.html' %}
+{% endblock react_head %}
+{% block react %}
+
+<script type="text/babel">
+  function QuestionBody() {
+    return (
+      <div className="QuestionBody">
+        <h3>This is where all questions a are displayed</h3>
+        
+      </div>
+    );
+  }
+
+  ReactDOM.render(<QuestionBody />, document.getElementById("questions_body"));
+</script>
+
+
+{% endblock react %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>ALl question will be  here</h2>
+<form action="" method="post">
+<div id='msg' style=" background-color: coral"></div>
+<div id="hidden_data" style="display:none">
+{% for qn in qns %}
+<xmp>
+<div style="'background-color:blue">
+</xmp>
+{{qn.code_field}}
+
+<xmp>
+<br><br><br>
+</div >
+</xmp>
+
+{% endfor %}
+</div>
+<br>
+<p>-------------------------------------------------------------------------------------------</p>
+<br>
+
+</>
+<button type="submit">click to post question</button>
+</form>
+<script>
+  ans=document.getElementById('hidden_data').textContent
+    console.log('hiden -------------',ans)
+    document.getElementById('msg').innerHTML=ans
+
+
+</script>
+    
+</body>
+</html>

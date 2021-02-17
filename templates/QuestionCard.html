@@ -1,0 +1,110 @@
+
+<script type="text/babel">
+
+
+
+
+
+
+
+
+const {
+  colors,
+  CssBaseline,
+  ThemeProvider,
+  Typography,
+  Container,
+  makeStyles,
+  createMuiTheme,
+  Box,
+  SvgIcon,
+  Link,
+} = MaterialUI;
+
+
+
+
+
+
+
+
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      maxWidth: "auto",
+      marginBottom: "10px",
+    },
+    text: {
+      fontWeight: "500",
+    },
+    media: {
+      height: 0,
+      paddingTop: "56.25%", // 16:9
+      color: "white",
+    },
+
+    avatar: {
+      backgroundColor: red[500],
+
+      color: "white",
+    },
+  })
+);
+
+ function RecipeReviewCard() {
+  const classes = useStyles();
+
+  const [userName, setuserName] = useState("teja46 user ");
+
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <Card className={classes.root}>
+      <CardHeader
+        avatar={
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            R
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="share">
+            <ShareIcon />
+          </IconButton>
+        }
+        title={userName}
+        subheader="September 14, 2016"
+      />
+
+      <CardContent>
+        <Typography
+          variant="body1"
+          color="white"
+          component="p"
+          className={classes.text}
+        >
+          This impressive paella is a perfect party dish and a fun meal to cook
+          together with your guests. Add 1 cup of frozen peas along with the
+          mussels, if you like.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites"></IconButton>
+
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        ></IconButton>
+      </CardActions>
+    </Card>
+  );
+}
+</script>

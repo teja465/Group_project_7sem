@@ -1,0 +1,24 @@
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+
+    <script id="mainScript">
+      var firebaseConfig = {
+        apiKey: "AIzaSyDK_0Jr3PvTiZOMS8C_eLefaiwSn9R7et0",
+        authDomain: "fir-js-554c2.firebaseapp.com",
+        databaseURL: "https://fir-js-554c2.firebaseio.com",
+        projectId: "fir-js-554c2",
+        storageBucket: "fir-js-554c2.appspot.com",
+        messagingSenderId: "21054683264",
+        appId: "1:21054683264:web:70b82f477f406e92150e65",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+      console.log(db)
+        db.collection("dummy").add({
+          item: 'itemv',
+          quantity: 'quantv',
+        });
+      </script>

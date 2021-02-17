@@ -1,0 +1,19 @@
+.Navbar {
+  padding-left: 1%;
+  padding-right: 2%;
+  background-color: #f3f7fb;
+  display: flex;
+  flex-direction: row;
+
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.span_tag {
+  width: 1%;
+}
+.auth_btn {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}

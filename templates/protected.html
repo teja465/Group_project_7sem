@@ -1,0 +1,32 @@
+<html>
+<style>
+img{
+  max-width:400px;
+
+}
+
+</style>
+    {% if msg %}
+    <h5>yes msg</h5>
+    <div id='msg' style="max-width: 450px; background-color:lightgray"></div>
+  <div id='hidden_data' style=" max-width: 450px; display:None" >{{msg}}</div>
+      
+    
+    {% else %}
+
+    <h5>No msg</h5>
+    {% endif %}
+
+    <form action="" method="post">
+      {% csrf_token %} {{ form.media }} {{form.as_p}}
+      <button>submit</button>
+    </form>
+    <script>
+    ans=document.getElementById('hidden_data').textContent
+    console.log('hiden -------------',ans)
+    document.getElementById('msg').innerHTML=ans
+     {% comment %} document.getElementById('msg').innerHTML+='-------------------------------------------------------------------------------------------------------------------------'
+    document.getElementById('msg').innerHTML+=ans {% endcomment %}
+    </script>
+  </body>
+</html>

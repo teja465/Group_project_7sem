@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Answer/src.1de0ce36.css' %}" />
+  </head>
+  <body>
+   {% comment %} {{question}} {% endcomment %}
+    <div
+      id="app"
+      data-question_id_from_jango="{{qn_id}}"
+      data-question_from_jango="{{question}}"
+    ></div>
+    <script src="{% static 'Answer/src.c2f11c86.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+Home page={
+    navbar
+<QuestionCard props='question'>
+Question card props=[
+
+
+}
+
+  ` fields in question collection
+  date
+  desc
+  question
+  userName
+  user_id
+  answersSubCollection 
+  `
+`fields in answer collection
+
+answer_text   [md field]
+likes         [array of user_id'd]
+dislikes      [array of user_id'd]
+user_id (user who answered)         [intger]
+userName            [str]
+desc                 [str,small user desc or bio from profile table]
+date         [big int sec from 1970]
+no_of_likes          [int]
+no_of_dislikes       [int]
+
+
+`
